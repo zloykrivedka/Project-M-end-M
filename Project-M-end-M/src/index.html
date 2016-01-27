@@ -5,15 +5,20 @@
     <title></title>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
     <!--Цссска для фона и эфекта приплижения-->
     <link rel="stylesheet" href="css/scroll-bg.css" media="screen" type="text/css" />
 
     <!--Цссска для иконки и эфекта пульсации-->
     <link rel="stylesheet" href="css/pulse-icon.css" />
 
-    <script src='js/jquery-1.12.0.min.js'></script>
+    <!--script src='js/jquery-1.12.0.min.js'></script-->
+    <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/jquery.scrollTo-1.4.3.1.js"></script>
+
+    <!--Скрипт для прокрутки автоскролла страницы
+ + размытие фона-->
+    <script src="js/scroll-bg.js"></script>
+
 </head>
 <body>
 
@@ -42,31 +47,40 @@
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
 
-<!--Кнопка старта (будущая, уже можно тыкать)-->
-<div class="icon-container">
-    <div class="pulse1"></div>
-    <div class="pulse2"></div>
-    <div id="iconStart" class="icon" onclick="end()"></div>
-</div>
 
 <!--большая длинная панель-->
 <div class="content-container">
-    <!--Панель в конце страницы, сюда приезжает
-    скрол и тут же будет происходить основное действо-->
-    <div id="endPageDiv" class="end-page-container">
-        <!--Якорь для скрипта (что бы знал куда ему ехать)-->
-    <a id="endPage" href="#endPage" name="endPage"></a>
-        <div class="pulse1"></div>
-        <div class="pulse2"></div>
-        <div class="icon"></div>
+
+    <!--Кнопка старта (будущая, уже можно тыкать)-->
+    <div class="icon-container">
+        <a id="startPage" href="#startPage" name="startPage"></a>
+        <div class="icon-title-start"><h1 align="center"><p>Start</p></h1></div>
+
+        <div id="iconStart" class="icon">
+            <div class="pulse2"></div>
+            <div class="pulse1"></div>
+        </div>
+
+
+    </div>
+
+    <div class="icon-container-end-page">
+        <div id="iconEnd" class="icon">
+            <div id="iconEndPulse1" class="pulse1"></div>
+            <div id="iconEndPulse2" class="pulse2"></div>
+        </div>
+        <div class="icon-title-back"><h1 align="center"><p>Go Back</p></h1></div>
+
+        <!--Панель в конце страницы, сюда приезжает
+        скрол и тут же будет происходить основное действо-->
+        <div id="endPageDiv" class="end-page-container">
+            <!--Якорь для скрипта (что бы знал куда ему ехать)-->
+            <a id="endPage" href="#endPage" name="endPage"></a>
+        </div>
+
     </div>
 </div>
-
 </body>
 </html>
-
-<!--Скрипт для прокрутки автоскролла страницы
- + размытие фона-->
-<script src="js/scroll-bg.js"></script>
 
 
