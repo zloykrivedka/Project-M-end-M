@@ -15,6 +15,8 @@ $(window).scroll(function(e) {
 
     //$('.arkaplan').css('-webkit-filter', 'blur('+500/scrollSeviye+'px)');
     $('.bg-container').css('-webkit-filter', 'blur('+scrollSeviye/1200+'px)');
+
+    $('.bg-container').css('-ms-filter', 'blur('+scrollSeviye/1200+'px)');
     $('.bg-container').css('transform', 'scale('+buyutme+')');
 });
 
